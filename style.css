@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  
+}
+
+img{
+    height: 70%;
+    width: 70%;
+    contain: cover;
+}
+
+html{
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: rgb(26, 26, 28);
+    
+    
+}
+
+.container{
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.name{
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: rgb(222, 223, 223);
+    border-radius: 5px;
+    display: flex; /* Add flexbox */
+    align-items: center; /* Align items vertically */
+}
+
+form input {
+    width: 100%; /* Adjusted width to make space for icon */
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    cursor: text;
+}
+
+form ion-icon {
+    font-size: 3rem;
+    color: rgb(75, 75, 75);
+    margin-right: 5px; /* Add right margin to separate icon from input */
+}
+
+
+/* .search{
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 2px;
+    border-radius: 50%;
+
+} */
+
+.Search-result {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Updated */
+    
+}
+
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(37, 36, 36);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.item .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .title {
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.view-button {
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    height: 3rem;
+    padding: 10px 0;
+    background-color: #484841;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.item-data {
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 0.5;
+    line-height: 2rem;
+}
+p {
+    color: white;
+    /* background-color: white; */
+    font-size:2rem;
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontally */
+}
+
+
+.container.initial .name{
+    font-size: 3rem;
+}
+
+.container.initial form{
+    max-width: 600px;
+}
+
+.container.initial form input{
+    padding: 20px;
+    font-size: 2rem;
+}
+
+@media (max-width:768px){
+    .Search-result{
+        grid-gap:10px;
+    }
+
+    .container.initial .name{
+        font-size: 1.5rem;
+    }
+
+    .container.initial form{
+        max-width: 300px;
+    }
+
+    .container.initial form input{
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}
