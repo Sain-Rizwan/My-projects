@@ -16,9 +16,10 @@ async function fetchAPI(){
     const baseUrl = `https://api.edamam.com/search?q=${searchQuery}&app_id=${App_id}&app_key=${App_key}&to=25`;
     const response = await fetch(baseUrl);
     const data = await response.json();
+    console.log(data);
     if (data.hits.length === 0) {
         // If no results found, display "Not found"
-        searchResultDiv.innerHTML = "<p>The Recipe you're looking for is not available</p>";
+        searchResultDiv.innerHTML = "<pre>The Recipe you're looking for is not available</pre>";
     } else {
         generateHTML(data.hits);
     }
@@ -37,8 +38,8 @@ async function fetchAPI(){
             <a class="view-button" href="${result.recipe.url}" target="_blank">View Recipe</a>
         </div>
         <p class="item-data">Calories : ${result.recipe.calories.toFixed(2)}</p>
-       
-
+        <p class="item-data">Cuisine-type : ${result.recipe.cuisineType}</p>
+        <p class="item-data">Diet Labels : ${result.recipe.dietLabels}</p>
     </div>`
     })
     searchResultDiv.innerHTML = generatedHTML;

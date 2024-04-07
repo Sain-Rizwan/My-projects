@@ -112,16 +112,17 @@ form ion-icon {
 .item .title {
     color: whitesmoke;
     margin: 20px 10px 0 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
+
 }
 
 .view-button {
     text-decoration: none;
     text-align: center;
-    width: 120px;
-    height: 3rem;
-    padding: 10px 0;
+    /* width: 120px; */
+    /* height: 3rem; */
+    padding: 0.9rem;
     background-color: #484841;
     color: white;
     font-size: 1.2rem;
@@ -137,7 +138,7 @@ form ion-icon {
     letter-spacing: 0.5;
     line-height: 2rem;
 }
-p {
+pre {
     color: white;
     /* background-color: white; */
     font-size:2rem;
